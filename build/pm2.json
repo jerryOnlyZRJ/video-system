@@ -1,0 +1,9 @@
+{
+  "apps" : [{
+    "name"        : "video-system",
+    "script"      : "app.js",
+    "watch"       : true,
+    "instances"  : "max",   //控制node的CPU数量
+    "exec_mode"  : "cluster"   //以主线程的形式启动node
+  }]
+}

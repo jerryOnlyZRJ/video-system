@@ -1,5 +1,9 @@
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
 var _koa = require('koa');
 
 var _koa2 = _interopRequireDefault(_koa);
@@ -32,3 +36,5 @@ app.use(_index2.default.routes(), _index2.default.allowedMethods());
 app.listen(_config2.default.get('port'), function () {
     console.log('website is starting at port ' + _config2.default.get('port'));
 });
+
+exports.default = app;

@@ -13,3 +13,6 @@ app.use(router.routes(), router.allowedMethods());
 app.listen(CONFIG.get('port'), () => {
     console.log(`website is starting at port ${CONFIG.get('port')}`)
 });
+
+// 导出app用于单测
+export default app

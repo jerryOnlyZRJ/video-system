@@ -18,7 +18,7 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /(\.jsx|\.js)$/,
+            test: /(\.jsx|\.js|\.es)$/,
             use: {
                 loader: 'babel-loader'
             },
@@ -28,7 +28,10 @@ module.exports = {
             use: ExtractTextPlugin.extract({
                 fallback: 'style-loader',
                 use: {
-                    loader: 'css-loader'
+                    loader: 'css-loader',
+                    options: {
+                        minimize: true
+                    }
                 }
             })
         }]
