@@ -1,7 +1,14 @@
+/**
+ * 页面入口文件
+ */
+
 import '../styles/index.css'
 import Tab from './tab.es'
+import 'babel-polyfill'
 
-//绑定menu点击事件
+/**
+ * 绑定menu-btn点击事件
+ */
 function menuEvn() {
     const menuBtn = document.querySelector('.main-header .icon-menu')
     const menu = document.querySelector('.main-sidebar')
@@ -10,14 +17,19 @@ function menuEvn() {
     })
 }
 
-//实例化tab
+/**
+ * 实例化tab
+ */
 function tabEvns() {
     const tab = new Tab('wrapper')
     tab.active(0)
     tab.listenEves()
 }
 
-//出入人员列表渲染
+/**
+ * 出入人员列表渲染
+ * @param  Array data 后端查询数据库后传来的待渲染数据
+ */
 function renderInfo(data) {
     const form = document.querySelector('.info-form')
     let list = document.createElement('ul')
@@ -34,7 +46,9 @@ function renderInfo(data) {
     form.appendChild(list)
 }
 
-//获取输入列表数据
+/**
+ * AJAX拿后端数据
+ */
 function getInfo() {
     fetch('/api/info').then(async data => {
         return await data.json()
@@ -43,7 +57,9 @@ function getInfo() {
     })
 }
 
-//界面初始化
+/**
+ * 页面初始化
+ */
 function init() {
     menuEvn()
     tabEvns()

@@ -1,3 +1,6 @@
+/**
+ * 自定义Tab组件
+ */
 class Tab {
     constructor(containerId) {
         const container = document.getElementById(containerId)
@@ -30,9 +33,12 @@ class Tab {
         });
     }
     listenEves() {
+        //兼容异步事件绑定时this的指向改变
         let self = this;
         this.container.addEventListener('click', function(e) {
+            // 通过事件委托给侧边栏的menu-item绑定click事件
             let target
+            //兼容子元素不被绑定事件的问题
             if (e.target.parentNode.className === 'menu-item') {
                 target = e.target.parentNode
             } else {

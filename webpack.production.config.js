@@ -11,11 +11,6 @@ module.exports = {
         filename: 'scripts/[name]-[hash:5].js', // 打包后输出文件的文件名,带有md5 hash戳
         publicPath: '/'
     },
-    devServer: {
-        contentBase: path.join(__dirname, '/build/views'), // 本地服务器所加载的页面所在的目录
-        historyApiFallback: true, // 不跳转
-        inline: true // 实时刷新
-    },
     module: {
         rules: [{
             test: /(\.jsx|\.js|\.es)$/,
