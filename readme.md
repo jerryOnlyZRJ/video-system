@@ -8,11 +8,11 @@
 
 ###视频广场效果：
 
-![channel](docs\channel.jpg)
+![channel](docs/channel.jpg)
 
 ### 出入信息效果：
 
-![info](docs\info.jpg)
+![info](docs/info.jpg)
 
 
 
