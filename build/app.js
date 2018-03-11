@@ -37,4 +37,5 @@ app.listen(_config2.default.get('port'), function () {
     console.log('website is starting at port ' + _config2.default.get('port'));
 });
 
+// 导出app用于单测
 exports.default = app;

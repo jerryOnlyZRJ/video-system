@@ -14,5 +14,5 @@ var CONFIG = new Map();
 CONFIG.set('port', 3000);
 CONFIG.set('staticDir', _path2.default.join(__dirname, '../public'));
 CONFIG.set('indexPath', _path2.default.join(__dirname, '../views/index.html'));
-CONFIG.set('infoUrl', 'http://localhost/mysql/info.php');
+CONFIG.set('infoUrl', 'http://localhost/info.php');
 exports.default = CONFIG;
