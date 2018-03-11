@@ -12,7 +12,7 @@ mysqli_query($conn , "set names utf8");
  
 $sql = 'SELECT * FROM info';
  
-mysqli_select_db( $conn, 'test' );
+mysqli_select_db( $conn, 'video' );
 $query = mysqli_query( $conn, $sql );
 if(! $query ){
     die('无法读取数据: ' . mysqli_error($conn));

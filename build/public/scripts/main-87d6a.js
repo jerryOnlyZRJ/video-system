@@ -3688,6 +3688,10 @@ function tabEvns() {
  */
 function renderInfo(data) {
     var form = document.querySelector('.info-form');
+    //将数据库后插入的数据置顶
+    data.sort(function () {
+        return 1;
+    });
     var list = document.createElement('ul');
     list.className = 'info-body';
     var _iteratorNormalCompletion = true;
@@ -3698,7 +3702,7 @@ function renderInfo(data) {
         for (var _iterator = data[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
             var item = _step.value;
 
-            list.innerHTML += '<li class="info-item">\n                                <div class="info-avatar">\n                                    <img src="' + item.pic_url + '" alt="">\n                                </div>\n                                <span>' + item.last_time + '</span>\n                                <a href="#">\u8BE6\u7EC6\u4FE1\u606F</a>\n                            </li>';
+            list.innerHTML += '<li class="info-item ' + (item.abnormal - 0 ? 'abnormal' : '') + '">\n                                <div class="info-avatar ">\n                                    <img src="' + item.pic_url + '" alt="">\n                                </div>\n                                <span>' + item.last_time + '</span>\n                                <span>' + (item.sex - 0 ? '男' : '女') + '</span>\n                                <span>' + item.age + '</span>\n                                <a href="#">\u8BE6\u7EC6\u4FE1\u606F</a>\n                            </li>';
         }
     } catch (err) {
         _didIteratorError = true;

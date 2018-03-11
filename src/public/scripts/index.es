@@ -32,14 +32,20 @@ function tabEvns() {
  */
 function renderInfo(data) {
     const form = document.querySelector('.info-form')
+    //将数据库后插入的数据置顶
+    data.sort(() => {
+        return 1
+    })
     let list = document.createElement('ul')
     list.className = 'info-body'
     for (let item of data) {
-        list.innerHTML += `<li class="info-item">
-                                <div class="info-avatar">
+        list.innerHTML += `<li class="info-item ${item.abnormal - 0 ? 'abnormal' : ''}">
+                                <div class="info-avatar ">
                                     <img src="${item.pic_url}" alt="">
                                 </div>
                                 <span>${item.last_time}</span>
+                                <span>${item.sex - 0 ? '男' : '女'}</span>
+                                <span>${item.age}</span>
                                 <a href="#">详细信息</a>
                             </li>`
     }
