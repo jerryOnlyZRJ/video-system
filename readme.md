@@ -6,7 +6,7 @@
 
 ## 效果展示
 
-###视频广场效果：
+### 视频广场效果：
 
 ![channel](docs/channel.jpg)
 
