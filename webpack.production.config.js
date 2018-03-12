@@ -46,5 +46,6 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
             filename: 'scripts/common/vendor-[hash:5].js'
-        })]
+        }),
+    ]
 }
