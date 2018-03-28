@@ -10,7 +10,7 @@
     "test": "jest",
     "coverage": "jest --coverage",
     "dev": "webpack-dev-server --open",
-    "build": "set NODE_ENV=production && webpack --config ./config/webpack.production.config.js --progress"
+    "build": "set NODE_ENV=production && webpack --config ./webpack.production.config.js --progress"
   },
   "author": "Jerry",
   "license": "ISC",
